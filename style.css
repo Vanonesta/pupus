@@ -1,0 +1,115 @@
+/* Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.container {
+  text-align: center;
+  z-index: 2;
+}
+
+.dynamic-text {
+  font-size: 2.5rem;
+  color: #ffffff;
+  background: linear-gradient(to right, #ff6a00, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 3s infinite linear;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  background: linear-gradient(to right, #ff6a00, #ffd700);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hidden {
+  display: none;
+}
+
+.fade-in {
+  width: 100%;
+  max-width: 300px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.surprise-text {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 5px #000;
+}
+
+/* Particles Background */
+.particles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Dark and Light Mode */
+body.light-mode {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+body.light-mode .subtitle {
+  color: #333333;
+}
+
+body.light-mode .dynamic-text {
+  -webkit-text-fill-color: #333333;
+}
+
+.love-message {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #ff9a9e;
+  text-align: center;
+  line-height: 1.5;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-in-out;
+}
